@@ -3,3 +3,12 @@ layout: single
 show_meta: false
 ---
 {% include figure image_path=page.image_url caption=page.caption %}
+
+{% if page.license_url and page.license_text %}
+<p>
+  <strong>Πηγή και άδεια χρήσης:</strong>
+  <a href="{{ page.license_url }}">
+    {{ page.license_text }}
+  </a>
+</p>
+{% endif %}
